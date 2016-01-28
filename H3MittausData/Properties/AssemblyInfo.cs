@@ -7,11 +7,11 @@ using System.Windows;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Esa's MediaPlayer")]
+[assembly: AssemblyTitle("H3MittausData")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("JAMK IT")]
-[assembly: AssemblyProduct("MediaPlayer")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("H3MittausData")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
