@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:H3MittausData"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525" FontSize="18">
-    <Grid>
+        Title="MittausData Demo Torstai" Height="350" Width="1050" FontSize="18">
+    <Grid Background="#FF09A67B" >
         <TabControl x:Name="tabControl" 
                     HorizontalAlignment="Stretch" 
                     Margin="10,10,0,0" VerticalAlignment="Stretch" >
@@ -17,7 +17,16 @@
                             <TextBlock Text="Tänään on:"/>
                             <TextBlock x:Name="txtToday"/>
                             <TextBlock Text="Tiedostonimi:" Margin="10,0,0,0"/>
-                            <TextBox x:Name="txtFileName" Text="d:\temp\testi.txt"/>
+                            <TextBox x:Name="txtFileName" Text="d:\testi.dat"/>
+                            <TextBlock Text="TXT" />
+                            <Button x:Name="btnSave" Content="Tallenna" Click="btnSave_Click" />
+                            <Button x:Name="btnRead" Content="Hae tiedot" Click="btnRead_Click" />
+                            <TextBlock Text="XML" />
+                            <Button x:Name="btnSerialize" Content="Serialisoi" Click="btnSerialize_Click" />
+                            <Button x:Name="btnDeSerialize" Content="Deserialisoi" Click="btnDeSerialize_Click" />
+                            <TextBlock Text="Binääri" />
+                            <Button x:Name="btnSerializeBin" Content="Serialisoi" Click="btnSerializeBin_Click" />
+                            <Button x:Name="btnDeSerializeBin" Content="Deserialisoi" Click="btnDeSerializeBin_Click" />
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="klo:" />
