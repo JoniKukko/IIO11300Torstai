@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H7ADONETConsole", "H7ADONET
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H8ADONETLasnaolotWPF", "H8ADONETLasnaolotWPF\H8ADONETLasnaolotWPF.csproj", "{904FCF5D-8665-4901-9135-D131264DE6E5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H9BookshopORM", "H9BookshopORM\H9BookshopORM.csproj", "{4CDB20FF-7877-4FF5-8EFF-2C209E487946}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{904FCF5D-8665-4901-9135-D131264DE6E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{904FCF5D-8665-4901-9135-D131264DE6E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{904FCF5D-8665-4901-9135-D131264DE6E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CDB20FF-7877-4FF5-8EFF-2C209E487946}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CDB20FF-7877-4FF5-8EFF-2C209E487946}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CDB20FF-7877-4FF5-8EFF-2C209E487946}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CDB20FF-7877-4FF5-8EFF-2C209E487946}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

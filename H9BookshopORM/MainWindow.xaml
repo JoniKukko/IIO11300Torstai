@@ -1,0 +1,48 @@
+﻿<Window x:Class="H9BookshopORM.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:H9BookshopORM"
+        mc:Ignorable="d"
+        Title="Esan Wanhojen Kirjojen Kauppa" Height="350" Width="525" FontSize="16">
+    <Grid>
+        <!-- DockPanelin avulla voidaan asemoida Top, Left, Right, Bottom LastChildFill=true täyttää vikalla elementillä lopun näytön -->
+        <DockPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch" LastChildFill="True" >
+            <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+                <StackPanel Name="spMenu">
+                    <Button Content="Hae testikirjat " Height="28" HorizontalAlignment="Left" Name="btnHaeTesti"  Width="167"  Margin="5,5,5,0" Click="btnHaeTesti_Click" />
+                    <Button Content="Hae kirjat SQL Server" Height="28" HorizontalAlignment="Left" Name="btnHaeSQLServer"  Width="167"  Margin="5,5,5,0" Click="btnHaeSQLServer_Click" />
+                    <ComboBox x:Name="cbCountries" ItemsSource="{Binding}" Height="26"  Margin="5,5,5,0" Visibility="Hidden"  />
+                </StackPanel>
+                <StackPanel Name="spBook" Background="Chocolate" MinWidth="200" Orientation="Horizontal">
+                    <StackPanel>
+                        <TextBlock>Tuote</TextBlock>
+                        <TextBlock>Nimi</TextBlock>
+                        <TextBlock>Kirjailija</TextBlock>
+                        <TextBlock>Maa</TextBlock>
+                        <TextBlock>Vuosi</TextBlock>
+                    </StackPanel>
+                    <StackPanel MinWidth="200" HorizontalAlignment="Left">
+                        <!-- olion property ovat casesensitive-->
+                        <TextBlock Name="txtKirja" Text="{Binding Mode=Oneway}" FontFamily="Tw Cen MT Condensed Extra Bold" Margin="1" Foreground="White"></TextBlock>
+                        <TextBox Name="txtNimi" Text="{Binding Path=Name, UpdateSourceTrigger=PropertyChanged}" FontFamily="Tw Cen MT Condensed Extra Bold" Margin="1"></TextBox>
+                        <TextBox Name="txtKirjailija" Text="{Binding Path=Author, UpdateSourceTrigger=PropertyChanged}" FontFamily="Tw Cen MT Condensed Extra Bold" Margin="1"></TextBox>
+                        <TextBox Name="txtMaa" Text="{Binding Path=Country}" FontFamily="Tw Cen MT Condensed Extra Bold" Margin="1"></TextBox>
+                        <TextBox Name="txtVuosi" Text="{Binding Path=Year}" FontFamily="Tw Cen MT Condensed Extra Bold" MinWidth="40" MaxWidth="40" HorizontalAlignment="Left" Margin="1"></TextBox>
+                        <Button x:Name="btnTallenna" Content="Tallenna" Click="btnTallenna_Click"  />
+                        <Button x:Name="btnUusi" Content="Uusi" Click="btnUusi_Click" />
+                        <Button x:Name="btnPoista" Content="Poista" Click="btnPoista_Click" />
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+            <StatusBar DockPanel.Dock="Bottom">
+                <TextBlock Name="tbMessage" Text="Tähän ilmoitukset" Height="32"/>
+            </StatusBar>
+            <DataGrid AutoGenerateColumns="True" Height="Auto" HorizontalAlignment="Left" 
+                      Margin="5,5,5,5" Name="dgBooks" VerticalAlignment="Top" Width="Auto" 
+                      ItemsSource="{Binding}" SelectionChanged="dgBooks_SelectionChanged"/>
+        </DockPanel>
+
+    </Grid>
+</Window>
