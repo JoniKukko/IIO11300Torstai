@@ -13,7 +13,7 @@
                 <TextBlock>Pelaaja:</TextBlock>
                 <TextBlock x:Name="tbPlayer" Text="{Binding Path=NameAndNumber , Mode=OneWay}" Background="LightCyan" ></TextBlock>
                 <TextBlock>Nimi:</TextBlock>
-                <TextBox x:Name="txtName" Text="{Binding Path=Name, Mode=TwoWay}"></TextBox>
+                <TextBox x:Name="txtName" Text="{Binding Path=Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
                 <TextBlock>Numero:</TextBlock>
                 <TextBox x:Name="txtNumber" Text="{Binding Path=Number, Mode=TwoWay}"></TextBox>
             </StackPanel>
